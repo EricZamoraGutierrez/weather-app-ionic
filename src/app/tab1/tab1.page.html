@@ -1,17 +1,116 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-header>Weather Chan</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-grid class="container">
+  <ion-row>
+    <ion-col size="12" size-md="6" size-lg="4">
+      <ion-card class="Weather">
+        <ion-card-content>
+          <ion-grid class="sub-grid">
+            <ion-row>
+              <ion-col>
+                <ion-card class="Weather-Card1">
+                  <ion-card-content class="small-text">
+                    Horny
+                  </ion-card-content>
+                  <ion-footer>
+                    <ion-title class="small-title">Today</ion-title>
+                  </ion-footer>
+                </ion-card>
+              </ion-col>
+              <ion-col>
+                <ion-card class="Weather-Card2">
+                  <ion-card-content class="small-text">
+                    HORNY
+                  </ion-card-content>
+                  <ion-footer>
+                    <ion-title class="small-title">Tomorrow</ion-title>
+                  </ion-footer>
+                </ion-card>
+              </ion-col>
+              <ion-col>
+                <ion-card class="Weather-Card3">
+                  <ion-card-content class="small-text">
+                    HORNY
+                  </ion-card-content>
+                  <ion-footer>
+                    <ion-title class="small-title">Day after tomorrow</ion-title>
+                  </ion-footer>
+                </ion-card>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+<style>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../assets/FondoPanatallaZeroTwo.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .Weather {
+    width: fit-content;
+    border-radius: 20px;
+    height: fit-content;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .sub-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 20px;
+  }
+
+  .Weather-Card1 {
+    height: 100%;
+    background-color: aqua;
+    border-radius: 10px;
+  }
+
+  .Weather-Card2 {
+    height: 100%;
+    background-color: rgb(255, 8, 0);
+    border-radius: 10px;
+  }
+
+  .Weather-Card3 {
+    height: 100%;
+    background-color: rgb(101, 4, 121);
+    border-radius: 10px;
+  }
+
+  .small-title {
+    font-size: 14px;
+  }
+
+  .small-text {
+    font-size: 12px;
+  }
+
+  .Weather::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.3;
+    z-index: -1;
+  }
+
+  @media screen and (max-width: 768px) {
+    .sub-grid {
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+  }
+</style>
