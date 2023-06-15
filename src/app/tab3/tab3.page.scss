@@ -1,3 +1,6 @@
+ion-title{
+  text-align: center;
+}
 ion-card-title {
   --color: #000000;
 }
@@ -8,17 +11,34 @@ ion-card {
   --color: #000000;
 }
 .zerotwo {
-  --background: url("/assets/imges/zerotwo.jpg");
+  --background: url("/assets/images/zerotwo.svg");
   background-size: cover;
+  text-align: right;
+  border-radius: 15px;
 }
 .kocho {
-  --background: url("/assets/imges/kocho.jpg");
+  --background: url("/assets/images/kocho.jpg");
   background-size: cover;
+  text-align: right;
+  border-radius: 15px;
 }
 .rem {
-  --background: url("/assets/imges/rem.jpg");
+  --background: url("/assets/images/rem.jpg");
   background-size: cover;
-  color: #ffff
+  text-align: right;
+  border-radius: 15px;
+}
+.tatsumaki{
+  --background: url("/assets/images/tatsumaki.jpg");
+  background-size: cover;
+  text-align: right;
+  border-radius: 15px;
+}
+.marin{
+  --background: url("/assets/images/marin.svg");
+  background-size: cover;
+  text-align: right;
+  border-radius: 15px;
 }
 
 .rem ion-card-title {
@@ -26,4 +46,35 @@ ion-card {
 }
 .rem ion-card-subtitle {
   --color: #ffffff;
+}
+.paleta-de-colores {
+  display: flex;
+  justify-content: right;
+  margin-right: 4%;
+  
+}
+
+.circulo-primario {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+.circulo-secundario {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 5px;
+  border-style: solid;
+  border-width: 1px;
+}
+.circulo-terciario {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  margin: 5px;
+  border-style: solid;
+  border-width: 1px;
 }
