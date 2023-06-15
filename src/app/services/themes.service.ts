@@ -1,6 +1,7 @@
 import { Injectable,Inject } from '@angular/core';
 import * as Color from 'color';
 import { DOCUMENT } from '@angular/common';
+import { Storage } from '@ionic/storage';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,11 @@ export class ThemesService {
 
   constructor(
     @Inject(DOCUMENT) private document: Document
-  ) { }
+  ) { 
+    // storage.get('theme').then(cssText => {  // <--- GET SAVED THEME
+    //   this.setGlobalCSS(cssText);
+    // });
+  }
 
   setTheme(theme:[]){
     const cssText = CSSTextGenerator(theme);
