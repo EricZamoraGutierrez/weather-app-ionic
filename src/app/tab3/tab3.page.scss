@@ -1,0 +1,29 @@
+ion-card-title {
+  --color: #000000;
+}
+ion-card-subtitle {
+  --color: #000000;
+}
+ion-card {
+  --color: #000000;
+}
+.zerotwo {
+  --background: url("/assets/imges/zerotwo.jpg");
+  background-size: cover;
+}
+.kocho {
+  --background: url("/assets/imges/kocho.jpg");
+  background-size: cover;
+}
+.rem {
+  --background: url("/assets/imges/rem.jpg");
+  background-size: cover;
+  color: #ffff
+}
+
+.rem ion-card-title {
+  --color: #ffffff;
+}
+.rem ion-card-subtitle {
+  --color: #ffffff;
+}
