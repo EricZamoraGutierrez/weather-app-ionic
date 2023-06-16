@@ -9,16 +9,17 @@ import { ThemesService } from '../services/themes.service';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
-  buttonText: string = 'Add';
+  toggler: string = 'Add';
 
 
   constructor() { }
 
   ThemeSelector(theme: any) {
     let body = document.getElementsByTagName('html')[0];
+    body.classList.remove('md-ZeroTwo');
+    body.classList.remove('md-Shinobu');
 
-    if (this.buttonText === 'Add') {
-      this.buttonText = 'Remove';
+    if (theme == 'zerotwo' || theme == 'shinobu') {
       switch (theme) {
         case 'zerotwo':
           body.classList.remove();
@@ -29,7 +30,6 @@ export class Tab3Page {
           body.classList.add('md-Shinobu');
       }
     } else {
-      this.buttonText = 'Add';
       body.classList.remove('md-ZeroTwo');
       body.classList.remove('md-Shinobu');
       body.classList.add('md');
