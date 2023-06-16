@@ -27,11 +27,17 @@ export class Tab3Page {
         case 'shinobu':
           body.classList.remove();
           body.classList.add('md-Shinobu');
+          break;
+          case 'rem':
+          body.classList.remove();
+          body.classList.add('md-rem');
+          break;
       }
     } else {
       this.buttonText = 'Add';
       body.classList.remove('md-ZeroTwo');
       body.classList.remove('md-Shinobu');
+      body.classList.remove('md-rem');
       body.classList.add('md');
     }
   }
