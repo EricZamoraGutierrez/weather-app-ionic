@@ -10,6 +10,15 @@ ion-card-subtitle {
 ion-card {
   --color: #000000;
 }
+
+.slide-in-right {
+  ion-content {
+    --ion-nav-view: {
+      animation: var(--ion-animation-slide-right);
+    }
+  }
+}
+
 .zerotwo {
   --background: url("/assets/images/zerotwo.svg");
   background-size: cover;
