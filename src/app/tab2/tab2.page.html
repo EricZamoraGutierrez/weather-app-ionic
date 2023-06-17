@@ -1,17 +1,33 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Routine
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content scrollY>
+  <ion-card class="Routine" *ngFor="let card of cards">
+    
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+      <div class="addCard-button-container">
+        
+        <button class="removeCard-button" (click)="removeCard(card.id)">
+          <ion-icon name="trash"></ion-icon> 
+        </button>
+      </div>
+     
+  </ion-card>
+
+  <div class="addCard-button-container" (click)="addCard()">
+    <button class="addCard-button" >
+      <ion-icon name="add"></ion-icon>
+    </button>
+    
+  </div>
+
+ 
 </ion-content>

@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { ThemesService } from '../services/themes.service';
+
+
 
 @Component({
   selector: 'app-tab3',
@@ -6,7 +9,30 @@ import { Component } from '@angular/core';
   styleUrls: ['tab3.page.scss']
 })
 export class Tab3Page {
+  buttonText: string = 'Add';
 
-  constructor() {}
 
+  constructor() { }
+
+  ThemeSelector(theme: any) {
+    let body = document.getElementsByTagName('html')[0];
+
+    if (this.buttonText === 'Add') {
+      this.buttonText = 'Remove';
+      switch (theme) {
+        case 'zerotwo':
+          body.classList.remove();
+          body.classList.add('md-ZeroTwo');
+          break;
+        case 'shinobu':
+          body.classList.remove();
+          body.classList.add('md-Shinobu');
+      }
+    } else {
+      this.buttonText = 'Add';
+      body.classList.remove('md-ZeroTwo');
+      body.classList.remove('md-Shinobu');
+      body.classList.add('md');
+    }
+  }
 }
