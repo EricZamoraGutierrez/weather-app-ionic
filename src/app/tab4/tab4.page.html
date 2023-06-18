@@ -1,6 +1,6 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>tab4</ion-title>
+    <ion-title>Configuration</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -10,4 +10,34 @@
       <ion-title size="large">tab4</ion-title>
     </ion-toolbar>
   </ion-header>
+
+  <div class="wrapper">
+    <div class="top-row">
+      <ion-button expand="full" class="ion-activatable ripple-parent white-button" routerLink="/tabs/tab2">
+        <ion-label>Add Routines</ion-label>
+        <ion-icon name="home"></ion-icon>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-button>
+
+      <ion-button expand="full" class="ion-activatable ripple-parent white-button" routerLink="/tabs/tab3">
+        <ion-label>Theme</ion-label>
+        <ion-icon name="color-palette-sharp"></ion-icon>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-button>
+    </div>
+
+    <div class="bottom-row">
+      <ion-button expand="full" class="ion-activatable ripple-parent white-button" routerLink="/tabs/tab2">
+        <ion-label>Routines</ion-label>
+        <ion-icon name="alarm-sharp"></ion-icon>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-button>
+
+      <ion-button expand="full" class="ion-activatable ripple-parent white-button">
+        <ion-label>En proceso</ion-label>
+        <ion-icon name="mail"></ion-icon>
+        <ion-ripple-effect></ion-ripple-effect>
+      </ion-button>
+    </div>
+  </div>
 </ion-content>
