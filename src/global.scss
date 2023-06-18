@@ -25,3 +25,15 @@
 @import "@ionic/angular/css/flex-utils.css";
 
 @import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Varela+Round&display=swap');
+
+.custom-popover{
+    --background: var(--ion-popover-color);
+   ::part(scroll) {
+        backdrop-filter: blur(12px);
+    }
+
+    ion-content{
+        --background: transparent;
+    }
+}
+

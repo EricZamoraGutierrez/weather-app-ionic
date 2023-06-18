@@ -9,7 +9,7 @@
 <ion-content scrollY>
   <ion-card class="Routine" *ngFor="let card of cards">
     
-      <div class="circle"></div>
+      <div class="circle" (click)="openPopover()"></div>
       <div class="circle"></div>
       <div class="circle"></div>
 
@@ -28,6 +28,7 @@
     </button>
     
   </div>
+
 
  
 </ion-content>

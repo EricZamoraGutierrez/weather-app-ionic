@@ -236,6 +236,7 @@ ion-app{
     --ion-tab-bar-background: #1f1f1f;
 
     --ion-card-background: #1e1e1e;
+    --ion-popover-color: #0000005c; //always add 5c at the end of the color
   }
   .md-ZeroTwo body {
     --ion-background-color: #f7bdfa;
@@ -273,6 +274,8 @@ ion-app{
     --ion-tab-bar-background: #b8279f;
 
     --ion-card-background: #de73c3;
+
+    --ion-popover-color: #c905f55c; //always add 5c at the end of the color
   }
   .md-Shinobu body {
     --ion-background-color: #008cff;
@@ -310,6 +313,8 @@ ion-app{
     --ion-tab-bar-background: #a51ad8;
 
     --ion-card-background: #de73c3;
+
+    --ion-popover-color: #008cff5c;//always add 5c at the end of the color
   }
 }
 //Here it is the font

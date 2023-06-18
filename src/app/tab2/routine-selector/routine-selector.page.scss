@@ -1,0 +1,18 @@
+ion-row{
+    margin-top: 10vh;
+}
+
+ion-col{
+    margin-bottom: 30px;
+    color: var(--ion-color-primary);
+}
+
+ion-toolbar{
+    --background: white;
+    --color: white;
+    ion-button{
+        ion-icon{
+            font-size: 50px;
+        }
+    }
+}
