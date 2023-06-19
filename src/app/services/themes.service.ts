@@ -56,6 +56,7 @@ export class ThemesService {
       body.classList.remove('md-tatsumaki');
       body.classList.remove('md-marin');
       body.classList.add('md');
+      this.setTheme('md');
     }
   }
 
