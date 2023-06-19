@@ -138,6 +138,7 @@
       "@ionic/angular-toolkit"
     ],
     "analytics": false
+    "analytics": false
   },
   "schematics": {
     "@ionic/angular-toolkit:component": {
