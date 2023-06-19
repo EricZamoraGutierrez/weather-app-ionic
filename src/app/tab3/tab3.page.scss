@@ -11,12 +11,10 @@ ion-card {
   --color: #000000;
 }
 
-.slide-in-right {
-  ion-content {
-    --ion-nav-view: {
-      animation: var(--ion-animation-slide-right);
-    }
-  }
+ion-button{
+  display: flex;
+  
+  background-color: var(--ion-card-background);
 }
 
 .zerotwo {
