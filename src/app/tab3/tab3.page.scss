@@ -11,10 +11,11 @@ ion-card {
   --color: #000000;
 }
 
+
 ion-button{
-  display: flex;
-  
-  background-color: var(--ion-card-background);
+  display: grid;
+  justify-content: center;
+  color: var(--ion-card-background);
 }
 
 .zerotwo {

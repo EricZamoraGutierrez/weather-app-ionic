@@ -1,39 +1,21 @@
-import { Component, OnInit } from '@angular/core';
-import { GestureController } from '@ionic/angular';
-GestureController
+import { trigger, transition, style, animate } from '@angular/animations';
+import { Component } from '@angular/core';
+import { Tab1Page } from '../tab1/tab1.page';
+import { Tab2Page } from '../tab2/tab2.page';
+import { Tab3Page } from '../tab3/tab3.page';
+import { Tab1PageModule } from '../tab1/tab1.module';
 
 @Component({
   selector: 'app-tabs',
   templateUrl: 'tabs.page.html',
-  styleUrls: ['tabs.page.scss']
+  styleUrls: ['tabs.page.scss'],
 })
-export class TabsPage implements OnInit {
+export class TabsPage {
+  tab1Root = Tab1Page;
+  tab2Root = Tab2Page;
+  tab3Root = Tab3Page;
 
-  constructor(private gestureCtrl: GestureController) {}
-  ngOnInit() {
-    this.enableTabSwipeGesture();
-  }
+  constructor() {}
   
-  enableTabSwipeGesture() {
-    const tabBar = document.querySelector('ion-tab-bar');
-    if (tabBar) {
-      const gesture = this.gestureCtrl.create({
-        el: tabBar,
-        gestureName: 'swipe',
-        direction: 'x',
-        threshold: 20,
-        canStart: () => true,
-        onMove: ev => {
-          if (ev.deltaX > 0) {
-            // Arrastrar hacia la derecha
-            // Cambiar a la pestaña anterior
-          } else if (ev.deltaX < 0) {
-            // Arrastrar hacia la izquierda
-            // Cambiar a la siguiente pestaña
-          }
-        }
-      });
-      gesture.enable();
-    }
-  }
 }
+
