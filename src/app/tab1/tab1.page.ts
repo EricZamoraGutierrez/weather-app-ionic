@@ -1,4 +1,7 @@
+import { AnimationBuilder } from '@angular/animations';
 import { Component } from '@angular/core';
+import { NavController } from '@ionic/angular';
+
 
 @Component({
   selector: 'app-tab1',
@@ -8,5 +11,7 @@ import { Component } from '@angular/core';
 export class Tab1Page {
 
   constructor() {}
+
+
 
 }

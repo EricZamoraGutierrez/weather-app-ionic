@@ -2,6 +2,10 @@
 // http://ionicframework.com/docs/theming/
 
 /** Ionic CSS Variables **/
+ion-app{ 
+  font-family:Varela Round, sans-serif;
+  font-size:1.1em;
+}
 :root {
   /** primary **/
   --ion-color-primary: #3880ff;
@@ -233,4 +237,194 @@
 
     --ion-card-background: #1e1e1e;
   }
+  .md-ZeroTwo body {
+    --ion-background-color: #fbc6c8;
+    --ion-background-color-rgb: 18,18,18;
+
+    --ion-text-color: #ffffff;
+    --ion-text-color-rgb: 255,255,255;
+
+    --ion-border-color: #8bc7c3;
+
+    --ion-color-step-50: #ff0000;
+    --ion-color-step-100: #ff0000;
+    --ion-color-step-150: #ff0000;
+    --ion-color-step-200: #ff0000;
+    --ion-color-step-250: #ff0000;
+    --ion-color-step-300: #ff0000;
+    --ion-color-step-350: #ff0000;
+    --ion-color-step-400: #ff0000;
+    --ion-color-step-450: #ff0000;
+    --ion-color-step-500: #ff0000;
+    --ion-color-step-550: #ff0000;
+    --ion-color-step-600: #ff0000;
+    --ion-color-step-650: #ff0000;
+    --ion-color-step-700: #ff0000;
+    --ion-color-step-750: #ff0000;
+    --ion-color-step-800: #ff0000;
+    --ion-color-step-850: #ff0000;
+    --ion-color-step-900: #ff0000;
+    --ion-color-step-950: #ff0000;
+
+    --ion-item-background: #bf3533;
+
+    --ion-toolbar-background: #ff9f9f;
+
+    --ion-tab-bar-background: #ff0000;
+
+    --ion-card-background: #ffffff;
+  }
+  .md-Shinobu body {
+    --ion-background-color: #6c579e;
+    --ion-background-color-rgb: 18,18,18;
+
+    --ion-text-color: #ffffff;
+    --ion-text-color-rgb: 255,255,255;
+
+    --ion-border-color: #c905f5;
+
+    --ion-color-step-50: #000000;
+    --ion-color-step-100: #2a2a2a;
+    --ion-color-step-150: #363636;
+    --ion-color-step-200: #414141;
+    --ion-color-step-250: #4d4d4d;
+    --ion-color-step-300: #595959;
+    --ion-color-step-350: #656565;
+    --ion-color-step-400: #717171;
+    --ion-color-step-450: #7d7d7d;
+    --ion-color-step-500: #898989;
+    --ion-color-step-550: #949494;
+    --ion-color-step-600: #a0a0a0;
+    --ion-color-step-650: #acacac;
+    --ion-color-step-700: #b8b8b8;
+    --ion-color-step-750: #c4c4c4;
+    --ion-color-step-800: #d0d0d0;
+    --ion-color-step-850: #dbdbdb;
+    --ion-color-step-900: #e7e7e7;
+    --ion-color-step-950: #ffffff;
+
+    --ion-item-background: #da75ca;
+
+    --ion-toolbar-background: #302349;
+
+    --ion-tab-bar-background: #302349;
+
+    --ion-card-background: #c9e3cc;
+  }
+  .md-rem body {
+    --ion-background-color: #00a9e0;
+    --ion-background-color-rgb: 18,18,18;
+
+    --ion-text-color: #000000;
+    --ion-text-color-rgb: 255,255,255;
+
+    --ion-border-color: #2905f5;
+
+    --ion-color-step-50: #001868;
+    --ion-color-step-100: #2a2a2a;
+    --ion-color-step-150: #363636;
+    --ion-color-step-200: #414141;
+    --ion-color-step-250: #4d4d4d;
+    --ion-color-step-300: #595959;
+    --ion-color-step-350: #656565;
+    --ion-color-step-400: #717171;
+    --ion-color-step-450: #7d7d7d;
+    --ion-color-step-500: #898989;
+    --ion-color-step-550: #949494;
+    --ion-color-step-600: #a0a0a0;
+    --ion-color-step-650: #acacac;
+    --ion-color-step-700: #b8b8b8;
+    --ion-color-step-750: #c4c4c4;
+    --ion-color-step-800: #d0d0d0;
+    --ion-color-step-850: #dbdbdb;
+    --ion-color-step-900: #e7e7e7;
+    --ion-color-step-950: #ffffff;
+
+    --ion-item-background: #079ecf;
+
+    --ion-toolbar-background: #ffffff;
+
+    --ion-tab-bar-background: #000000;
+
+    --ion-card-background: #415cb4;
+  }
+  .md-tatsumaki body {
+    --ion-background-color: #181818;
+    --ion-background-color-rgb: 18,18,18;
+
+    --ion-text-color: #00ff73;
+    --ion-text-color-rgb: 255,255,255;
+
+    --ion-border-color: #20be00;
+
+    --ion-color-step-50: #00ff73;
+    --ion-color-step-100: #00ff73;
+    --ion-color-step-150: #00ff73;
+    --ion-color-step-200: #00ff73;
+    --ion-color-step-250: #00ff73;
+    --ion-color-step-300: #00ff73;
+    --ion-color-step-350: #00ff73;
+    --ion-color-step-400: #00ff73;
+    --ion-color-step-450: #00ff73;
+    --ion-color-step-500: #00ff73;
+    --ion-color-step-550: #00ff73;
+    --ion-color-step-600: #00ff73;
+    --ion-color-step-650: #00ff73;
+    --ion-color-step-700: #00ff73;
+    --ion-color-step-750: #00ff73;
+    --ion-color-step-800: #00ff73;
+    --ion-color-step-850: #00ff73;
+    --ion-color-step-900: #00ff73;
+    --ion-color-step-950: #00ff73;
+
+    --ion-item-background: #00ff73;
+
+    --ion-toolbar-background: #071a05;
+
+    --ion-tab-bar-background: #071a05;
+
+    --ion-card-background: #071a05;
+  }
+  .md-marin body {
+    --ion-background-color: #fdff83d2;
+    --ion-background-color-rgb: 18,18,18;
+
+    --ion-text-color: #000000;
+    --ion-text-color-rgb: 255,255,255;
+
+    --ion-border-color: #fbff00;
+
+    --ion-color-step-50: #000000;
+    --ion-color-step-100: #2a2a2a;
+    --ion-color-step-150: #363636;
+    --ion-color-step-200: #414141;
+    --ion-color-step-250: #4d4d4d;
+    --ion-color-step-300: #595959;
+    --ion-color-step-350: #656565;
+    --ion-color-step-400: #717171;
+    --ion-color-step-450: #7d7d7d;
+    --ion-color-step-500: #898989;
+    --ion-color-step-550: #949494;
+    --ion-color-step-600: #a0a0a0;
+    --ion-color-step-650: #acacac;
+    --ion-color-step-700: #b8b8b8;
+    --ion-color-step-750: #c4c4c4;
+    --ion-color-step-800: #d0d0d0;
+    --ion-color-step-850: #dbdbdb;
+    --ion-color-step-900: #e7e7e7;
+    --ion-color-step-950: #ffffff;
+
+    --ion-item-background: #ff00d4;
+
+    --ion-toolbar-background: #ffbef4;
+
+    --ion-tab-bar-background: #ffbef4;
+
+    --ion-card-background: #db4aff;
+  }
+}
+//Here it is the font
+ion-app{ 
+  font-family:Varela Round, sans-serif;
+  font-size:1.1em;
 }
