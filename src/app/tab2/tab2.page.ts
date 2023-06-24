@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { ModalController, PopoverController } from '@ionic/angular';
 import { RoutineSelectorPage } from './routine-selector/routine-selector.page';
 
+
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',

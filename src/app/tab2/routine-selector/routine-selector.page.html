@@ -1,7 +1,51 @@
-<ion-content fullscreen="true" scrollY="true">
-  <ion-row scrollY="true">
-     <ion-col size="12" *ngFor="let info of activity" class="ion-text-center" scrollY="true">
-      <ion-button expand="full" fill="outline" shape="round">{{info.name}}</ion-button>
+<ion-content fullscreen="true" scrollY="true" class="routine-configurator" >
+
+
+  <!-- Selecionar Actividad -->
+  <ion-row >
+    <div class="title">
+      <h2>Programa tu actividad</h2>
+    </div>
+    
+    <ion-col *ngFor="let info of activity" class="ion-text-center" (click)="selectActivity(info)" 
+    [ngClass]="{'selected': info === selectedActivity}">
+      <div class="circle" [style.background-color]="info.backgroundColor">
+        <img [src]="info.Image"  class="circle-image">
+      </div>
+      <div class="circle-text" >{{info.name}}</div>
+      
     </ion-col>
+    
+     <!-- Selecionar dias de la semana -->
+    <ion-item class="diaSemanas">
+      <ion-label>Días de la semana</ion-label>
+      <ion-checkbox-group [(ngModel)]="weekDays">
+        <ion-row>
+
+            <!-- Iterar sobre los días de la semana -->
+          <ion-col size="4" *ngFor="let day of weekDays">
+            <ion-item>
+              <ion-label>{{day}}</ion-label>
+
+               <!-- Comprobar si el día está seleccionado -->
+              <ion-checkbox [checked]="isDaySelected(day)" (ionChange)="toggleDaySelection(day)"></ion-checkbox>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-checkbox-group>
+    </ion-item>
+
+     <!-- Selecionar Hora -->
+    <ion-item>
+      <ion-label>Hora </ion-label>
+      <input type="time" [(ngModel)]="selectedTime" class=custom-time-input>
+    </ion-item>
   </ion-row>
+ 
+
+ 
+    <!-- Botón para aplicar los cambios -->
+  <ion-button expand="full" (click)="applyChanges()">Aplicar cambios</ion-button>
 </ion-content>
+
+

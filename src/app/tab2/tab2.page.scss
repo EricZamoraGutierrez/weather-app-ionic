@@ -10,24 +10,25 @@
         width: 50px;
         height: 50px;
         border-radius: 50%;
+        border: 2px solid #000000;
         background-color: white;
         position: absolute;
       }
 
       .circle:nth-child(1) {
-        background-color: #F1FF9C;
+        background-color: #d3d3d3;
         top: 20px;
         left: 20px;
       }
   
       .circle:nth-child(2) {
-        background-color: #7BC0FF;
+        background-color: #d3d3d3;
         top: 20px;
         right: 20px;
       }
   
       .circle:nth-child(3) {
-        background-color: #8EF47E;
+        background-color: #d3d3d3;
         top: 20px;
         left: 50%;
         transform: translateX(-50%);
