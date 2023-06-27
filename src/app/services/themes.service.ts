@@ -15,6 +15,12 @@ export class ThemesService {
 
   ThemeSelector(theme: any) {
     let body = document.getElementsByTagName('html')[0];
+    let centerImage = document.getElementById('center-image');
+    // centerImage.classList.remove('');
+    // centerImage.classList.remove('md-Shinobu');
+    // centerImage.classList.remove('md-rem');
+    // centerImage.classList.remove('md-tatsumaki');
+    // centerImage.classList.remove('md-marin');
     body.classList.remove('md-ZeroTwo');
     body.classList.remove('md-Shinobu');
     body.classList.remove('md-rem');
