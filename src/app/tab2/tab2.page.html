@@ -1,20 +1,34 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Routine
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-card>
-    <ion-card-header>
-      <ion-card-title>Card Title</ion-card-title>
-      <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
-    </ion-card-header>
-  
-    <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
-    </ion-card-content>
+<ion-content scrollY>
+  <ion-card class="Routine" *ngFor="let card of cards">
+    
+      <div class="circle" (click)="openPopover()"></div>
+      <div class="circle" (click)="openPopover()"></div>
+      <div class="circle" (click)="openPopover()"></div>
+
+      <div class="addCard-button-container">
+        
+        <button class="removeCard-button" (click)="removeCard(card.id)">
+          <ion-icon name="trash"></ion-icon> 
+        </button>
+      </div>
+     
   </ion-card>
+
+  <div class="addCard-button-container" (click)="addCard()">
+    <button class="addCard-button" >
+      <ion-icon name="add"></ion-icon>
+    </button>
+    
+  </div>
+
+
+ 
 </ion-content>

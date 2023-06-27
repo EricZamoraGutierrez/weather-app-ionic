@@ -1,0 +1,82 @@
+//Estilo de la ventana emergente
+.routine-configurator {
+    background-color: #fefefe;
+    padding: 50px;
+    max-height:450px;
+  }
+
+  //Titulo de la ventana emergente
+  .title{
+    text-align: right;
+    color: rgb(0, 0, 0);
+  }
+  
+  //Estilo de los iconos de las actividades
+  .circle {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin: 10px;
+    border: 2px solid #000000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  //Estilo de las imagenes de los iconos
+  .circle-image {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  //Estilo de los titulos de las actividades
+  .circle-text {
+    margin-top: 10px;
+    text-align: center;
+    color: #000000;
+  }
+
+
+  .diaSemanas ion-row {
+    font-size: 8px; //Tamaño de fuente  
+  }
+  
+  .diaSemanas ion-item {
+    padding: 1px; //Espaciado interno 
+  }
+  
+  .diaSemanas ion-label {
+    font-size: 12px; //Tamaño de fuente
+  }
+  
+  .diaSemanas ion-checkbox {
+    --size: 16px; // Tamaño del checkbox
+  }
+  
+  //Estilo de cuando se seleciona un actividad
+  .selected {
+    width: 50px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px;
+    border: 2px solid rgb(137, 255, 255);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(137, 255, 255);
+  }
+
+  //Estilo de input para selecionar la hora 
+  @media (max-width: 767px) {
+    .custom-time-input {
+      align-items: 80px;
+      font-size: 14px;
+      padding: 6px;
+    }
+  }
+
+  
