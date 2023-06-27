@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
+import { ModalController} from '@ionic/angular';
+
 
 
 @Component({
@@ -9,6 +10,12 @@ import { ModalController } from '@ionic/angular';
 })
 export class RoutineSelectorPage implements OnInit {
 
+
+  @Output() applysChanges = new EventEmitter<any>();
+  
+  backgroundColor: string="";
+  image: string="";
+  name: string="";
   //Objeto Actividades predetermindas
   activity = [
     {
@@ -82,6 +89,14 @@ selectActivity(activity: any) {
     console.log('Días seleccionados:', this.selectedWeekDays);
     console.log('Hora seleccionada:', this.selectedTime);
 
+    // Emitir los datos seleccionados al cerrar la ventana emergente
+    this.modalCtrl.dismiss({
+        backgroundColor: this.backgroundColor,
+        image: this.image,
+        name: this.name
+      });
+      
+    
     
   }
 

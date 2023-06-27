@@ -8,10 +8,19 @@
 
 <ion-content scrollY>
   <ion-card class="Routine" *ngFor="let card of cards">
-    
-      <div class="circle" (click)="openPopover()"></div>
-      <div class="circle" (click)="openPopover()"></div>
-      <div class="circle" (click)="openPopover()"></div>
+      
+    <div class="circle-1" (click)="openPopover()"[style.background-color]="card.backgroundColor">
+      <img [src]="card.image" class="circle-image" />
+    </div>
+    <div class="circle-text-1">{{ card.name }}</div>
+    <div class="circle-2" (click)="openPopover()"[style.background-color]="card.backgroundColor">
+      <img [src]="card.image" class="circle-image" />
+    </div>
+    <div class="circle-text-2">{{ card.name }}</div>
+    <div class="circle-3" (click)="openPopover()"[style.background-color]="card.backgroundColor">
+      <img [src]="card.image" class="circle-image" />
+    </div>
+    <div class="circle-text-3">{{ card.name }}</div>
 
       <div class="addCard-button-container">
         
