@@ -2,7 +2,8 @@ ion-title {
   text-align: center;
 }
 ion-card {
-  background: url("../../assets/images/noche.jpg");
+  background: transparent;
+  
   box-shadow: none;
   text-align: center;
 
@@ -32,7 +33,7 @@ ion-item {
 
 .center-image-kocho {
   --background: url("../../assets/images/shinobu_clima.webp");
-  background-size: 80%;
+  background-size: 60%;
   background-position:center top;
   background-repeat: no-repeat;
   position: static;

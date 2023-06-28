@@ -244,7 +244,7 @@ ion-app {
     --ion-text-color: #bf3533;
     --ion-text-color-rgb: 255, 255, 255;
 
-    --ion-border-color: #fbc6c8; //bordecito tabbar
+    --ion-border-color: transparent; //bordecito tabbar
 
     --ion-color-step-50: #bf3533;
     --ion-color-step-100: #bf3533;
@@ -282,7 +282,7 @@ ion-app {
     --ion-text-color: #ffffff;
     --ion-text-color-rgb: 255, 255, 255;
 
-    --ion-border-color: #6c579e; //bordecito tabbar
+    --ion-border-color: transparent; //bordecito tabbar
 
     --ion-color-step-100: #c905f5;
     --ion-color-step-150: #c905f5;
@@ -319,7 +319,7 @@ ion-app {
     --ion-text-color: #c2dcfd;
     --ion-text-color-rgb: 255, 255, 255;
 
-    --ion-border-color: #c2dcfd; //bordecito tabbar
+    --ion-border-color: transparent; //bordecito tabbar
 
     --ion-color-step-50: #000000;
     --ion-color-step-100: #2a2a2a;
@@ -357,7 +357,7 @@ ion-app {
     --ion-text-color: #00ff73;
     --ion-text-color-rgb: 255, 255, 255;
 
-    --ion-border-color: #181818; //bordecito tabbar
+    --ion-border-color: transparent; //bordecito tabbar
 
     --ion-color-step-50: #00ff73;
     --ion-color-step-100: #00ff73;
@@ -387,15 +387,15 @@ ion-app {
 
     --ion-card-background: #071a05;
   }
-  .md-marin body {
-    --ion-color-primary: #6c579e; //color icon selected
-    --ion-background-color: #fdff83d2;
+  .md-rias body {
+    --ion-color-primary: #ff0000; //color icon selected
+    --ion-background-color: #ff0000;
     --ion-background-color-rgb: 18, 18, 18;
 
-    --ion-text-color: #000000;
+    --ion-text-color: #ffffff;
     --ion-text-color-rgb: 255, 255, 255;
 
-    --ion-border-color: #fdff83d2; //bordecito tabbar
+    --ion-border-color: transparent; //bordecito tabbar
 
     --ion-color-step-50: #000000;
     --ion-color-step-100: #2a2a2a;
@@ -407,23 +407,23 @@ ion-app {
     --ion-color-step-400: #717171;
     --ion-color-step-450: #7d7d7d;
     --ion-color-step-500: #898989;
-    --ion-color-step-550: #949494; //subtitle y description
+    --ion-color-step-550: #000000; //subtitle y description
     --ion-color-step-600: #a0a0a0;
-    --ion-color-step-650: #acacac; //iconos tabbar
+    --ion-color-step-650: #ffffff; //iconos tabbar
     --ion-color-step-700: #b8b8b8;
     --ion-color-step-750: #c4c4c4;
     --ion-color-step-800: #d0d0d0;
-    --ion-color-step-850: #dbdbdb; //card title
+    --ion-color-step-850: #000000; //card title
     --ion-color-step-900: #e7e7e7;
     --ion-color-step-950: #ffffff;
 
     --ion-item-background: #ff00d4;
 
-    --ion-toolbar-background: #ffbef4;
+    --ion-toolbar-background: #000000;
 
-    --ion-tab-bar-background: #ffbef4;
+    --ion-tab-bar-background: #000000;
 
-    --ion-card-background: #db4aff;
+    --ion-card-background: #ffbaba;
   }
 }
 //Here it is the font
