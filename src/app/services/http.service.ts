@@ -15,7 +15,7 @@ export class HttpService {
   }
 
   getDailyWeather(lat: number, lng: number) {
-    const locatedURL: string = "https://api.open-meteo.com/v1/forecast?latitude=" + lat + "&longitude="+ lng + "&hourly=temperature_2m,relativehumidity_2m,apparent_temperature,precipitation_probability&current_weather=true&timezone=auto";
+    const locatedURL: string = "https://api.open-meteo.com/v1/forecast?latitude="+ lat + "&longitude=" +lng +"&hourly=temperature_2m&daily=weathercode,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_probability_max&current_weather=true&timezone=auto";
     console.log(locatedURL)
 
     return this.http.get(locatedURL);
