@@ -7,37 +7,28 @@
 </ion-header>
 
 <ion-content scrollY>
-  <ion-card class="Routine" *ngFor="let card of cards">
-      
-    <div class="circle-1" (click)="openPopover()"[style.background-color]="card.backgroundColor">
-      <img [src]="card.image" class="circle-image" />
-    </div>
-    <div class="circle-text-1">{{ card.name }}</div>
-    <div class="circle-2" (click)="openPopover()"[style.background-color]="card.backgroundColor">
-      <img [src]="card.image" class="circle-image" />
-    </div>
-    <div class="circle-text-2">{{ card.name }}</div>
-    <div class="circle-3" (click)="openPopover()"[style.background-color]="card.backgroundColor">
-      <img [src]="card.image" class="circle-image" />
-    </div>
-    <div class="circle-text-3">{{ card.name }}</div>
-
+  <!-- Contenedor principal -->
+  <div class="container">
+    <!-- Tarjetas de la rutina -->
+    <ion-card class="Routine" *ngFor="let card of cards">
+      <!-- Circulo con imagen -->
+      <div class="circle" [style.background-color]="card.activity.backgroundColor">
+        <img [src]="card.activity.Image" class="circle-image" />
+      </div>
+      <!-- Texto debajo del círculo -->
+      <div class="circle-text">{{ card.activity.name }}</div>
+      <!-- Boton de eliminar -->
       <div class="addCard-button-container">
-        
         <button class="removeCard-button" (click)="removeCard(card.id)">
-          <ion-icon name="trash"></ion-icon> 
+          <ion-icon name="ellipsis-vertical-outline"></ion-icon>
         </button>
       </div>
-     
-  </ion-card>
-
-  <div class="addCard-button-container" (click)="addCard()">
-    <button class="addCard-button" >
+    </ion-card>
+  </div>
+  <!-- Boton de agregar -->
+  <div class="addCard-button-container" (click)="openPopover($event)">
+    <button class="addCard-button">
       <ion-icon name="add"></ion-icon>
     </button>
-    
   </div>
-
-
- 
 </ion-content>

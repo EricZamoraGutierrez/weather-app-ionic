@@ -6,7 +6,7 @@
     <div class="title">
       <h2>Programa tu actividad</h2>
     </div>
-    
+    <!-- Selecionar rutina -->
     <ion-col *ngFor="let info of activity" class="ion-text-center" (click)="selectActivity(info)" 
     [ngClass]="{'selected': info === selectedActivity}">
       <div class="circle" [style.background-color]="info.backgroundColor">
@@ -19,23 +19,23 @@
      <!-- Selecionar dias de la semana -->
     <ion-item class="diaSemanas">
       <ion-label>Días de la semana</ion-label>
-      <ion-checkbox-group [(ngModel)]="weekDays">
+     
         <ion-row>
 
-            <!-- Iterar sobre los días de la semana -->
+            <!-- Iterar sobre los dias de la semana -->
           <ion-col size="4" *ngFor="let day of weekDays">
             <ion-item>
               <ion-label>{{day}}</ion-label>
 
-               <!-- Comprobar si el día está seleccionado -->
+               <!-- Comprobar si el dia esta seleccionado -->
               <ion-checkbox [checked]="isDaySelected(day)" (ionChange)="toggleDaySelection(day)"></ion-checkbox>
             </ion-item>
           </ion-col>
         </ion-row>
-      </ion-checkbox-group>
+      
     </ion-item>
 
-     <!-- Selecionar Hora -->
+     <!-- Selecionar hora -->
     <ion-item>
       <ion-label>Hora </ion-label>
       <input type="time" name="selectedTime" [(ngModel)]="selectedTime" class="custom-time-input">
@@ -44,8 +44,8 @@
  
 
  
-    <!-- Botón para aplicar los cambios -->
-  <ion-button expand="full" (click)="applyChanges()">Aplicar cambios</ion-button>
+    <!-- Boton para aplicar los cambios -->
+  <ion-button expand="full" (click)="applyChanges()">Guardar</ion-button>
 </ion-content>
 
 

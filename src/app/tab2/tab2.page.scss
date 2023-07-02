@@ -1,92 +1,87 @@
-.Routine  {
-    width:140;
-    height: 100px;
-    border-radius: 8dvw;
-    background-color: #D95B66;
-    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1), 
-    0 8px 10px rgba(0, 0, 0, 0.1);
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
 
-    /*.circle {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 2px solid #000000;
-        background-color: white;
-        position: absolute;
-      }*/
+.Routine {
+  width: 30%;
+  height: 8%;
+  border-radius: 8dvw;
+  background-color: #eab5b9;
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1), 0 8px 10px rgba(0, 0, 0, 0.1);
+  margin: 1%;
+  margin-top: 5%;
 
-      .circle-1 {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 2px solid #000000;
-        background-color: #d3d3d3;
-        top: 20px;
-        left: 20px;
-        position: absolute;
-      }
-  
-      .circle-2 {
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 2px solid #000000;
-        background-color: #d3d3d3;
-        top: 20px;
-        right: 20px;
-        position: absolute;
-      }
-  
-      .circle-3{
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 2px solid #000000;
-        background-color: #d3d3d3;
-        top: 20px;
-        left: 50%;
-        position: absolute;
-        transform: translateX(-50%);
-
-
-      } 
-  
-
-
-      .removeCard-button {
-        position: absolute;
-        bottom: -28px;
-        right: -115px;
-        background-color: transparent;
-        border: none;
-        color: rgb(255, 255, 255);
-        cursor: pointer;
-      }
-      .removeCard-button ion-icon {
-        font-size: 15px;
-      }
-  
-  } 
-
-  .addCard-button-container {
-    display: flex;
-    justify-content: left;
-    position: absolute;
-    bottom: 30px; 
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1; 
-  }
-
-  .addCard-button {
+  /* Estilos para el círculo */
+  .circle {
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background-color: rgb(255, 255, 255);
+    border: 2px solid #000000;
+    background-color: #d3d3d3;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.1);
-    border: none;
-    color: rgb(92, 91, 91);
+    margin: auto;
   }
+
+  /* Estilos para la imagen dentro del círculo */
+  .circle img {
+    max-width: 50px;
+    max-height: 50px;
+    border-radius: 50%;
+    align-items: center;
+  }
+
+  /* Estilos para el texto debajo del círculo */
+  .circle-text {
+    text-align: center;
+    margin-top: 75px;
+    color: black;
+  }
+
+  /* Estilos para el botón de eliminar */
+  .removeCard-button {
+    position: absolute;
+    top: -50px;
+    left: 25px;
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+  }
+
+  .removeCard-button ion-icon {
+    font-size: 15px;
+  }
+}
+
+/* Estilos para el contenedor del botón de agregar */
+.addCard-button-container {
+  display: flex;
+  justify-content: left;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+/* Estilos para el botón de agregar */
+.addCard-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 6px 8px rgba(0, 0, 0, 0.1);
+  border: none;
+  color: rgb(92, 91, 91);
+}
