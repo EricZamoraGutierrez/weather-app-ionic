@@ -42,15 +42,6 @@ export class ExploreContainerComponent implements OnInit {
     windspeed: 0,
   };
 
-  //weekly
-  weeklyWeather: any = [
-    {
-      date: '',
-      temp: 0,
-      icon: '',
-      description: ''
-    }
-  ];
   //weekly array
   weeklyWeatherArray: OneDayWeather[] = [];
 
