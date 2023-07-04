@@ -102,6 +102,7 @@ selectActivity(activity: any) {
   }
     
   
+  
 
   //Boton para guardar datos de lo selecionado
   applyChanges() {

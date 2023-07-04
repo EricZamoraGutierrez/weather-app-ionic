@@ -12,24 +12,23 @@
     <!-- Tarjetas de la rutina -->
     <ion-card class="Routine" *ngFor="let card of cards">
       <!-- Circulo con imagen -->
-      <div class="circle" [style.background-color]="card.activity.backgroundColor">
-        <img [src]="card.activity.Image" class="circle-image" (click)="updateRoutine(card)" />
+      <div (click)="updateRoutine(card)" class="circle" [style.background-color]="card.activity.backgroundColor">
+        <img [src]="card.activity.Image" class="circle-image" />
       </div>
       <!-- Texto debajo del círculo -->
       <div class="circle-text">{{ card.activity.name }}</div>
       <!-- Boton de eliminar -->
       <div class="removeCard-button-container">
-        <ion-menu-toggle auto-hide="false">
-          <button class="removeCard-button" (click)="presentAlert(card.id)">
-            <ion-icon name="trash"></ion-icon>
-          </button>
-        </ion-menu-toggle>  
+        <button class="removeCard-button" (click)="presentAlert(card.id)">
+          <ion-icon name="trash"></ion-icon>
+        </button>
       </div>
+      
       <ion-alert trigger="present-alert" class="custom-alert" header="Are you sure?" [buttons]="alertButtons"></ion-alert>
     </ion-card>
   </div>
   <!-- Boton de agregar -->
-  <div class="addCard-button-container" (click)="openPopover($event)">
+  <div class="addCard-button-container" (click)="openPopover()">
     <button class="addCard-button">
       <ion-icon name="add"></ion-icon>
     </button>
