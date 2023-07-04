@@ -60,7 +60,9 @@ export class RoutineSelectorPage implements OnInit {
   selectedActivity: any; // Variable para realizar un seguimiento de la actividad seleccionada
   selectedWeekDays: string [] = []; //Variable para la seleccionar los dias de la semana
   weekDays = ['L', 'M', 'Mi', 'J', 'V', 'S', 'D']; //Arreglo de los dias de la semana 
-  selectedTime: string=""; //Variable para selecionar la hora
+  selectedTime: string = ''; //Variable para selecionar la hora
+  InformationComplete: boolean = true; //Verificar si la informacion solicitada esta completa
+  
 
   constructor(private modalCtrl: ModalController, private popOveCtlr: PopoverController) { }
 
@@ -68,6 +70,7 @@ export class RoutineSelectorPage implements OnInit {
   //Metdod para selecionar una actividad
 selectActivity(activity: any) {
     this.selectedActivity = activity;
+    this.InformationCompleteVerification(); // Llamar al método para verificar la información completa
   }
 
   //Metodo para cpmprobar si se a selecionado un dia de la semana
@@ -82,7 +85,23 @@ selectActivity(activity: any) {
     } else {
       this.selectedWeekDays.push(day);
     }
+    this.InformationCompleteVerification(); // Llamar al método para verificar la información completa
   }
+
+  InformationCompleteVerification() {
+    // Verificar si la información requerida está completa
+    if (
+      this.selectedActivity &&
+      this.selectedWeekDays.length > 0 &&
+      this.selectedTime !== ''
+    ) { 
+      this.InformationComplete = false; // Deshabilita el boton si se selecionan los campos
+    } else {
+      this.InformationComplete = true; // Habilita el boton si no se selecionan los campos
+    }
+  }
+    
+  
 
   //Boton para guardar datos de lo selecionado
   applyChanges() {
@@ -93,6 +112,11 @@ selectActivity(activity: any) {
     };
   
     this.popOveCtlr.dismiss(routineData);
+  }
+
+  Cancel() {
+    
+    this.popOveCtlr.dismiss();
   }
 
   

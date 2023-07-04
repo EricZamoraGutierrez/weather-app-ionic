@@ -13,16 +13,19 @@
     <ion-card class="Routine" *ngFor="let card of cards">
       <!-- Circulo con imagen -->
       <div class="circle" [style.background-color]="card.activity.backgroundColor">
-        <img [src]="card.activity.Image" class="circle-image" />
+        <img [src]="card.activity.Image" class="circle-image" (click)="updateRoutine(card)" />
       </div>
       <!-- Texto debajo del círculo -->
       <div class="circle-text">{{ card.activity.name }}</div>
       <!-- Boton de eliminar -->
-      <div class="addCard-button-container">
-        <button class="removeCard-button" (click)="removeCard(card.id)">
-          <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-        </button>
+      <div class="removeCard-button-container">
+        <ion-menu-toggle auto-hide="false">
+          <button class="removeCard-button" (click)="presentAlert(card.id)">
+            <ion-icon name="trash"></ion-icon>
+          </button>
+        </ion-menu-toggle>  
       </div>
+      <ion-alert trigger="present-alert" class="custom-alert" header="Are you sure?" [buttons]="alertButtons"></ion-alert>
     </ion-card>
   </div>
   <!-- Boton de agregar -->
@@ -31,4 +34,5 @@
       <ion-icon name="add"></ion-icon>
     </button>
   </div>
+  
 </ion-content>
