@@ -44,19 +44,10 @@ export class ExploreContainerComponent implements OnInit {
     windspeed: 0,
   };
 
-  //weekly
-  weeklyWeather: any = [
-    {
-      date: '',
-      temp: 0,
-      icon: '',
-      description: ''
-    }
-  ];
-  //getTodayName
-  dayno = new Date().getDay();
-  dayname = this.days[this.dayno];
-  dayTomorrow = this.days[this.dayno + 1];
+  //weekly array
+  weeklyWeatherArray: OneDayWeather[] = [];
+
+
 
   // weather data
   weather: any;
@@ -89,7 +80,7 @@ export class ExploreContainerComponent implements OnInit {
       );
 
       this.setTomorrowWeather(
-        this.dayTomorrow,
+        this.getTomorrow(this.dayno),
         this.weather.hourly.temperature_2m[23],
         this.weather.daily.weathercode[1],
         this.weather.daily.precipitation_probability_max[1],
@@ -99,7 +90,22 @@ export class ExploreContainerComponent implements OnInit {
         this.weather.daily.temperature_2m_max[1],
         this.weatherDescription(this.weather.daily.weathercode[1]),
       )
+
+      this.setWeekly();
     })
+    
+}
+
+  setWeekly(){
+    for (let i = 0; i < 7; i++) {
+      this.weeklyWeatherArray.push({
+        date: this.getTomorrow(i),
+        temp: this.weather.daily.temperature_2m_max[i],
+        icon: this.weather.daily.weathercode[i],
+        description: this.weatherDescription(this.weather.daily.weathercode[i])
+      });
+    }
+    console.log(this.weeklyWeatherArray);
   }
 
   setDailyWeather(date: any, temp: any, icon: any, precipitation: any,
@@ -121,7 +127,7 @@ export class ExploreContainerComponent implements OnInit {
   setTomorrowWeather(date: any, temp: any, icon: any, precipitation: any,
     sunrise: any, sunset: any, tempMin: any, tempMax: any,
     description: any) {
-    this.tomorrowWeather.date = date;
+    this.tomorrowWeather.date = this.getTomorrow(this.dayno);
     this.tomorrowWeather.temp = temp;
     this.tomorrowWeather.icon = icon;
     this.tomorrowWeather.description = description;
@@ -131,6 +137,7 @@ export class ExploreContainerComponent implements OnInit {
     this.tomorrowWeather.tempMin = tempMin;
     this.tomorrowWeather.tempMax = tempMax;
     console.log(this.tomorrowWeather);
+
   }
 
   //convert weathercode to weather description
@@ -192,5 +199,28 @@ export class ExploreContainerComponent implements OnInit {
     }
   }
 
+  dayno = new Date().getDay();
+  dayname = this.days[this.dayno];
+
+  getTomorrow(dayno: any) {
+    if (dayno == 6) {
+      return this.days[0];
+    } else {
+      return this.days[dayno + 1];
+    }
+  }
+  getDayName(dayno:any){
+    if (dayno == 6) {
+      return this.days[0];
+    } else {
+      return this.days[dayno];
+    }
+  }
 }
 
+interface OneDayWeather {
+  date: string;
+  icon: number;
+  temp: number;
+  description: string;
+}

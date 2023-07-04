@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { ModalController } from '@ionic/angular';
+import { Component, OnInit, EventEmitter, Output  } from '@angular/core';
+import { ModalController} from '@ionic/angular';
+import { PopoverController } from '@ionic/angular'
+
 
 
 @Component({
@@ -9,41 +11,47 @@ import { ModalController } from '@ionic/angular';
 })
 export class RoutineSelectorPage implements OnInit {
 
+
+  @Output() applysChanges = new EventEmitter<any>();
+  
+  backgroundColor: string="";
+  image: string="";
+  name: string="";
   //Objeto Actividades predetermindas
   activity = [
     {
-      name: 'Ejercitarse',
-      Image: ('../../../assets/images/ZeroTwo/ZeroHorny.png'),
+      name: 'Exercise',
+      Image: ('../../../assets/ZeroTwo/ZeroHorny.png'),
       backgroundColor: '#F1FF9C',
       phrase: '¡Preparate para calentar, es hora!'
     },
     {
-      name: 'Salir a la playa',
-      Image: ('../../../assets/images/ZeroTwo/ZeroHorny.png'),
+      name: 'Beach',
+      Image: ('../../../assets/ZeroTwo/ZeroHorny.png'),
       backgroundColor: '#FFCA99',
       phrase: '¡Recuerda usar bloqueador!'
     },
     {
-      name: 'Ir al parque',
-      Image: ('../../../assets/images/ZeroTwo/ZeroHorny.png'),
+      name: 'Park',
+      Image: ('../../../assets/ZeroTwo/ZeroHorny.png'),
       backgroundColor: '#8EF47E',
       phrase: '¡Recuerda que el clima será " " !'
     },
     {
-      name: 'Ir al colegio',
-      Image: ('../../../assets/images/ZeroTwo/ZeroHorny.png'),
+      name: 'School',
+      Image: ('../../../assets/ZeroTwo/ZeroHorny.png'),
       backgroundColor: '#FDCAE1',
       phrase: 'Run Forrest, Run!'
     },
     {
       name: 'Cycling',
-      Image: ('../../../assets/images/ZeroTwo/ZeroHorny.png'),
+      Image: ('../../../assets/ZeroTwo/ZeroHorny.png'),
       backgroundColor: '#FF6961',
       phrase: 'I want to ride my bicycle!'
     },
     {
       name: 'Swimming',
-      Image: ('../../../assets/images/ZeroTwo/ZeroHorny.png'),
+      Image: ('../../../assets/ZeroTwo/ZeroHorny.png'),
       backgroundColor: '#84B6F4',
       phrase: 'Just keep swimming!'
       
@@ -54,7 +62,7 @@ export class RoutineSelectorPage implements OnInit {
   weekDays = ['L', 'M', 'Mi', 'J', 'V', 'S', 'D']; //Arreglo de los dias de la semana 
   selectedTime: string=""; //Variable para selecionar la hora
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private modalCtrl: ModalController, private popOveCtlr: PopoverController) { }
 
 
   //Metdod para selecionar una actividad
@@ -78,12 +86,16 @@ selectActivity(activity: any) {
 
   //Boton para guardar datos de lo selecionado
   applyChanges() {
-    console.log('Actividad seleccionada:', this.selectedActivity);
-    console.log('Días seleccionados:', this.selectedWeekDays);
-    console.log('Hora seleccionada:', this.selectedTime);
-
-    
+    const routineData = {
+      activity: this.selectedActivity,
+      days: this.selectedWeekDays,
+      time: this.selectedTime
+    };
+  
+    this.popOveCtlr.dismiss(routineData);
   }
+
+  
 
   
 
