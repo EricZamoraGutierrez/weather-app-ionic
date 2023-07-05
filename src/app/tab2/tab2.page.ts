@@ -42,7 +42,15 @@ export class Tab2Page {
 
   //Eliminar rutina
   removeCard(cardId: number) {
-    this.cards = this.cards.filter((card) => card.id !== cardId);
+    const index =  this.cards.findIndex((objeto) => objeto.id === cardId);
+    if (index !== -1) {
+      this.cards.splice(index, 1);
+    }
+    if(!this.cards.length){
+      this.nextCardId =1;
+    }
+
+    console.log(this.cards);
   }
   
 
