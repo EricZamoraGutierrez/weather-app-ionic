@@ -5,11 +5,11 @@ describe('RoutineSelectorPage', () => {
   let component: RoutineSelectorPage;
   let fixture: ComponentFixture<RoutineSelectorPage>;
 
-  beforeEach(async(() => {
+  beforeEach(async() => {
     fixture = TestBed.createComponent(RoutineSelectorPage);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  }));
+  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

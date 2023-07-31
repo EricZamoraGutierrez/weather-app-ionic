@@ -7,28 +7,31 @@
 </ion-header>
 
 <ion-content scrollY>
-  <ion-card class="Routine" *ngFor="let card of cards">
-    
-      <div class="circle" (click)="openPopover()"></div>
-      <div class="circle" (click)="openPopover()"></div>
-      <div class="circle" (click)="openPopover()"></div>
-
-      <div class="addCard-button-container">
-        
-        <button class="removeCard-button" (click)="removeCard(card.id)">
-          <ion-icon name="trash"></ion-icon> 
+  <!-- Contenedor principal -->
+  <div class="container">
+    <!-- Tarjetas de la rutina -->
+    <ion-card class="Routine" *ngFor="let card of cards">
+      <!-- Circulo con imagen -->
+      <div (click)="updateRoutine(card)" class="circle" [style.background-color]="card.activity.backgroundColor">
+        <img [src]="card.activity.Image" class="circle-image" />
+      </div>
+      <!-- Texto debajo del círculo -->
+      <div class="circle-text">{{ card.activity.name }}</div>
+      <!-- Boton de eliminar -->
+      <div class="removeCard-button-container">
+        <button class="removeCard-button" (click)="presentAlert(card.id)">
+          <ion-icon name="trash"></ion-icon>
         </button>
       </div>
-     
-  </ion-card>
-
-  <div class="addCard-button-container" (click)="addCard()">
-    <button class="addCard-button" >
+      
+      <ion-alert id="present-alert" class="custom-alert" header="Are you sure?" [buttons]="alertButtons"></ion-alert>
+    </ion-card>
+  </div>
+  <!-- Boton de agregar -->
+  <div class="addCard-button-container" (click)="openPopover()">
+    <button class="addCard-button">
       <ion-icon name="add"></ion-icon>
     </button>
-    
   </div>
-
-
- 
+  
 </ion-content>

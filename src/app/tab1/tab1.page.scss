@@ -1,48 +1,53 @@
-ion-title{
-    text-align: center;
+ion-title {
+  text-align: center;
 }
- ion-card{
-    background: transparent;
-    box-shadow: none;
-    text-align: center;
- }
- 
+ion-card {
+  background: transparent;
+  
+  box-shadow: none;
+  text-align: center;
 
- ion-card-subtitle{
-    font-size: 42px;
-    }
+  
+}
 
-    img{
-        height: 40%;
-    }
-.center-image-default{
-    --background: url('../../assets/images/rem.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
+ion-card-subtitle {
+  font-size: 42px;
+}
 
-  .center-image-kocho{
-    --background: url('../../assets/images/kocho.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
-  .center-image-zerotwo{
-    --background: url('../../assets/images/zerotwo.svg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-  }
+ion-item {
+  background: var(--background);
+  width: 300px;
+  height: 450px;
+}
+
+.center-image-default {
+  --background: url("../../assets/images/rem.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.center-image-kocho {
+  --background: url("../../assets/images/shinobu_clima.webp");
+  background-size: 60%;
+  background-position:center top;
+  background-repeat: no-repeat;
+  position: static;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.center-image-zerotwo {
+  --background: url("../../assets/images/zerotwo.svg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}

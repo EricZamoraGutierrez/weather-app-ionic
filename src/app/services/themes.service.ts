@@ -17,17 +17,17 @@ export class ThemesService {
     let body = document.getElementsByTagName('html')[0];
     let centerImage = document.getElementById('center-image');
     // centerImage.classList.remove('');
-    // centerImage.classList.remove('md-Shinobu');
+    // centerImage.classList.remove('md-shinobu');
     // centerImage.classList.remove('md-rem');
     // centerImage.classList.remove('md-tatsumaki');
-    // centerImage.classList.remove('md-marin');
+    // centerImage.classList.remove('md-rias');
     body.classList.remove('md-ZeroTwo');
     body.classList.remove('md-Shinobu');
     body.classList.remove('md-rem');
     body.classList.remove('md-tatsumaki');
-    body.classList.remove('md-marin');
+    body.classList.remove('md-rias');
 
-    if (theme == 'zerotwo' || theme == 'shinobu' || theme == 'rem' || theme == 'tatsumaki' || theme == 'marin') {
+    if (theme == 'zerotwo' || theme == 'shinobu' || theme == 'rem' || theme == 'tatsumaki' || theme == 'rias') {
       switch (theme) {
         case 'zerotwo':
           body.classList.remove();
@@ -49,10 +49,10 @@ export class ThemesService {
           body.classList.add('md-tatsumaki');
           this.setTheme('tatsumaki');
           break;
-        case 'marin':
+        case 'rias':
           body.classList.remove();
-          body.classList.add('md-marin');
-          this.setTheme('marin');
+          body.classList.add('md-rias');
+          this.setTheme('rias');
           break;
       }
     } else {
@@ -60,7 +60,7 @@ export class ThemesService {
       body.classList.remove('md-Shinobu');
       body.classList.remove('md-rem');
       body.classList.remove('md-tatsumaki');
-      body.classList.remove('md-marin');
+      body.classList.remove('md-rias');
       body.classList.add('md');
       this.setTheme('md');
     }
