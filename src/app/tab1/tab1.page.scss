@@ -1,6 +1,9 @@
 ion-title {
   text-align: center;
 }
+ion-card-header{
+  margin-bottom: -10%;
+}
 ion-card {
   background: transparent;
   
@@ -9,7 +12,10 @@ ion-card {
 
   
 }
-
+app-explore-container{
+  height: 70%;
+  margin-bottom: -20%;
+}
 ion-card-subtitle {
   font-size: 42px;
 }
@@ -17,7 +23,8 @@ ion-card-subtitle {
 ion-item {
   background: var(--background);
   width: 300px;
-  height: 450px;
+  height: 350px;
+  
 }
 
 .center-image-default {
