@@ -18,15 +18,14 @@ ion-card{
   background-color: transparent;
   box-shadow: none;
   text-align: center;
+  width: 60%;
 }
-ion-card-content{
-  margin-bottom: -50%;
- 
+#weekly{
+  border-color: black;
+  border-style: solid;
 }
 
-.column {
-  flex: 1;
-}
+
 .today{
   display: flex;
 }
