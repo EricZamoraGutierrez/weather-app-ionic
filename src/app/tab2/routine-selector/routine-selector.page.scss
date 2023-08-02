@@ -7,9 +7,8 @@
 
   //Titulo de la ventana emergente
   .title{
-    text-align: right;
-    color: var(--ion-text-color);
-    margin-left: 6px;
+    margin-left: 2%;
+ 
   }
   
   //Estilo de los iconos de las actividades
@@ -37,7 +36,7 @@
   .circle-text {
     margin-top: 10px;
     text-align: center;
-    color: var(--ion-text-color);
+
   }
 
 
@@ -73,6 +72,31 @@
     align-items: center;
     background-color: var(--ion-tab-bar-background);
   }
+  
+  //Titulo del aparatdo de hora
+.hora {
+  margin-top: 2%;
+  margin-left: 16%;
+}
+
+//Titulo del aprataod de dias
+.dias{
+margin-left: 20%;
+}
+
+.custom-time-input{
+  margin-left: 5%;
+}
+
+.buttonapply{
+  margin-left: 4%;
+  width: auto;
+}
+
+.buttoncancel{
+  margin-right: 2%;
+  width: auto;
+}
 
   //Estilo de input para selecionar la hora 
   @media (max-width: 767px) {
@@ -86,5 +110,6 @@
 
   }
 
+  
 
   
