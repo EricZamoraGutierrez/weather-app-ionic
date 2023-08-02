@@ -46,6 +46,7 @@ export class RoutineSelectorPage implements OnInit {
     {
       name: 'Cycling',
       Image: '../../../assets/ZeroTwo/ZeroHorny.png',
+      backgroundColor:'#f384f4',
       phrase: 'I want to ride my bicycle!',
     },
     {
