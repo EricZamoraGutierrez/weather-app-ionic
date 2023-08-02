@@ -1,85 +1,96 @@
 <ion-card id="container">
-<ion-segment [(ngModel)]="selectedTab">
-  <ion-segment-button value="tab1">
-    Today
-  </ion-segment-button>
-  <ion-segment-button value="tab2">
-    Tomorrow
-  </ion-segment-button>
-  <ion-segment-button value="tab3">
-    Weekly
-  </ion-segment-button>
-</ion-segment>
+  <ion-segment [(ngModel)]="selectedTab">
+    <ion-segment-button value="tab1">
+      Today
+    </ion-segment-button>
+    <ion-segment-button value="tab2">
+      Tomorrow
+    </ion-segment-button>
+    <ion-segment-button value="tab3">
+      Weekly
+    </ion-segment-button>
+  </ion-segment>
 
-<ion-content>
-  <ng-container *ngIf="selectedTab === 'tab1'">
-    <ion-card>
-      <ion-card-content>
+  <ion-content>
+    <ng-container *ngIf="selectedTab === 'tab1'">
+      <ion-card>
+
+
         <!-- Contenido de la pestaña 1 -->
         <!-- Today -->
-  <div class="today">
-    <ion-card-header>
-      <ion-card-title>{{ dailyWeather.date }}</ion-card-title>
-      <ion-card-subtitle>{{ dailyWeather.temp }}°C</ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-      <p>{{dailyWeather.icon}} (Icon code)</p> <!-- use weathercode variables-->
-      <p>{{dailyWeather.description}}</p>
-      <p>{{dailyWeather.precipitation}} %</p>  <!-- one variable-->
-      <p>{{dailyWeather.sunrise}} / {{dailyWeather.sunset}}</p> <!-- two variables-->
-      <p>{{dailyWeather.tempMin}}° / {{dailyWeather.tempMax}}°</p> <!-- two variables-->
-      <p>{{dailyWeather.windspeed}} km/h</p>
-    </ion-card-content>
-  </div>
-      </ion-card-content>
-    </ion-card>
-  </ng-container>
+        <div class="today">
+          <ion-grid>
+            <ion-row >
+              <ion-col size="6">
+                <ion-card-title>{{ dailyWeather.date }}</ion-card-title>
+                <ion-card-subtitle>{{ dailyWeather.temp }}°C</ion-card-subtitle>
+              </ion-col>
+            </ion-row>
+          
+          <ion-row>
+            <ion-col>
+              <ion-card-content>
+                <p>{{dailyWeather.description}}</p>
+                <p>{{dailyWeather.precipitation}} %</p> <!-- one variable-->
+                <p>{{dailyWeather.sunrise}} / {{dailyWeather.sunset}}</p> <!-- two variables-->
+                <p>{{dailyWeather.tempMin}}° / {{dailyWeather.tempMax}}°</p> <!-- two variables-->
+                <p>{{dailyWeather.windspeed}} km/h</p>
+              </ion-card-content>
+          </ion-col>
+            </ion-row>
+          
+        </ion-grid>
+        </div>
 
-  <ng-container *ngIf="selectedTab === 'tab2'">
-    <ion-card>
-      <ion-card-content>
+
+      </ion-card>
+    </ng-container>
+
+    <ng-container *ngIf="selectedTab === 'tab2'">
+      <ion-card>
+
         <!-- Contenido de la pestaña 2 -->
         <!-- Tomorrow -->
-  <div class="tomorrow">
-    <ion-card-header>
-      <ion-card-title>{{ tomorrowWeather.date }}</ion-card-title>
-      <ion-card-subtitle>{{ tomorrowWeather.temp }}°C</ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-      <p>{{tomorrowWeather.icon}} (Icon code)</p> <!-- use weathercode variables-->
-      <p>{{tomorrowWeather.description}}</p>
-      <p>{{tomorrowWeather.precipitation}} %</p>  <!-- one variable-->
-      <p>{{tomorrowWeather.sunrise}} / {{tomorrowWeather.sunset}}</p> <!-- two variables-->
-      <p>{{tomorrowWeather.tempMin}}° / {{tomorrowWeather.tempMax}}°</p> <!-- two variables-->
-      <p>{{tomorrowWeather.windspeed}} km/h</p>
-    </ion-card-content>
-  </div>
-      </ion-card-content>
-    </ion-card>
-  </ng-container>
+        <div class="tomorrow">
 
-  <ng-container *ngIf="selectedTab === 'tab3'">
-    <ion-content class="ion-text-center">
-    <ion-card>
-      <ion-card-content>
-        
-        <!-- Contenido de la pestaña 3 -->
-        <!-- Weekly -->
-        
-        <div id="weekly" *ngFor="let dato of weeklyWeatherArray">
-          
-    <ion-card-header>
-      <ion-card-title>{{ dato.date }}</ion-card-title>
-      <ion-card-subtitle>{{ dato.temp }}</ion-card-subtitle>
-    </ion-card-header>
-    <ion-card-content>
-      <p>{{ dato.icon }}</p> <!-- use weathercode variables-->
-      <p>{{ dato.description }}</p>
-    </ion-card-content>
-</div>
-      </ion-card-content>
-    </ion-card>
+          <ion-card-title>{{ tomorrowWeather.date }}</ion-card-title>
+          <ion-card-subtitle>{{ tomorrowWeather.temp }}°C</ion-card-subtitle>
+
+<ion-card-content>
+          <p>{{tomorrowWeather.icon}} (Icon code)</p> <!-- use weathercode variables-->
+          <p>{{tomorrowWeather.description}}</p>
+          <p>{{tomorrowWeather.precipitation}} %</p> <!-- one variable-->
+          <p>{{tomorrowWeather.sunrise}} / {{tomorrowWeather.sunset}}</p> <!-- two variables-->
+          <p>{{tomorrowWeather.tempMin}}° / {{tomorrowWeather.tempMax}}°</p> <!-- two variables-->
+          <p>{{tomorrowWeather.windspeed}} km/h</p>
+</ion-card-content>
+        </div>
+
+      </ion-card>
+    </ng-container>
+
+    <ng-container *ngIf="selectedTab === 'tab3'">
+      <ion-content class="ion-text-center">
+        <ion-card>
+
+
+          <!-- Contenido de la pestaña 3 -->
+          <!-- Weekly -->
+
+          <div id="weekly" *ngFor="let dato of weeklyWeatherArray">
+
+            <ion-card-content>
+            <ion-card-title>{{ dato.date }}</ion-card-title>
+            <ion-card-subtitle>{{ dato.temp }}</ion-card-subtitle>
+
+
+            <p>{{ dato.icon }}</p> <!-- use weathercode variables-->
+            <p>{{ dato.description }}</p>
+            </ion-card-content>
+          </div>
+
+        </ion-card>
+      </ion-content>
+    </ng-container>
   </ion-content>
-  </ng-container>
-</ion-content>
 </ion-card>

@@ -30,11 +30,7 @@
     align-items: center;
     margin: auto;
   }
-  ion-content{
-    display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; 
-  }
+ 
   /* Estilos para la imagen dentro del círculo */
   .circle img {
     max-width: 50px;
@@ -65,7 +61,6 @@
     position: absolute;
     top: 7%;
     left: 75%;
-  
   }
   
   .removeCard-button {
@@ -104,10 +99,13 @@
 
   ion-alert.custom-alert {
     --backdrop-opacity: 0.7;
+    
   }
-  
+
+
   .custom-alert .alert-button-group {
     padding: 8px;
+    
   }
   
   button.alert-button.alert-button-confirm {

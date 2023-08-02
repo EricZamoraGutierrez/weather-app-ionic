@@ -9,12 +9,13 @@ ion-card {
   
   box-shadow: none;
   text-align: center;
-
+ 
   
 }
 app-explore-container{
   height: 60%;
   margin-bottom: -20%;
+  
 }
 
 ion-card-subtitle {
@@ -25,7 +26,6 @@ ion-item {
   background: var(--background);
   width: 300px;
   height: 350px;
-  
 }
 
 .center-image-default {
