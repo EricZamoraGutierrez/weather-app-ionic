@@ -206,7 +206,7 @@ ion-app {
     --ion-text-color: #ffffff;
     --ion-text-color-rgb: 255, 255, 255;
 
-    --ion-border-color: #222222;
+    --ion-border-color: transparent;
 
     --ion-color-step-50: #1e1e1e;
     --ion-color-step-100: #2a2a2a;
@@ -266,7 +266,9 @@ ion-app {
     --ion-color-step-900: #bf3533;
     --ion-color-step-950: #bf3533;
 
+
     --ion-item-background: #none;
+
 
     --ion-toolbar-background: #ff9f9f;
 
@@ -305,6 +307,7 @@ ion-app {
 
     --ion-item-background: #none;
 
+
     --ion-toolbar-background: #302349;
 
     --ion-tab-bar-background: #302349;
@@ -341,7 +344,9 @@ ion-app {
     --ion-color-step-900: #e7e7e7;
     --ion-color-step-950: #ffffff;
 
+
     --ion-item-background: #none;
+
 
     --ion-toolbar-background: #ffffff;
 

@@ -8,6 +8,8 @@ import { HttpService } from '../services/http.service';
   styleUrls: ['./explore-container.component.scss'],
 })
 export class ExploreContainerComponent implements OnInit {
+
+  selectedTab: string = 'tab1';
   position = {
     latitude: 0,
     longitude: 0
