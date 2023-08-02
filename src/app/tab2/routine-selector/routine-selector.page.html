@@ -17,8 +17,8 @@
     </ion-col>
     
      <!-- Selecionar dias de la semana -->
-    <ion-item class="diaSemanas">
-      <ion-label>Días de la semana</ion-label>
+    
+      <ion-label class="dias">Días de la semana</ion-label>
      
         <ion-row>
 
@@ -33,22 +33,22 @@
           </ion-col>
         </ion-row>
       
-    </ion-item>
+   
 
      <!-- Selecionar hora -->
-     <ion-item>
-      <ion-label>Hora</ion-label>
+     
+      <ion-label class="hora">Hora</ion-label>
       <input type="time" name="selectedTime" [(ngModel)]="selectedTime" class="custom-time-input" (ngModelChange)="InformationCompleteVerification()">
-    </ion-item>
     
+     <!-- Boton para aplicar los cambios -->
+  <div class="buttonapply"><ion-button (click)="applyChanges()" [disabled]="InformationComplete">Guardar</ion-button> </div>
+  <div class="buttoncancel"><ion-button color="medium" (click)="Cancel()">Cancelar</ion-button></div>
+
   </ion-row>
  
 
  
-    <!-- Boton para aplicar los cambios -->
-  <div class="buttonapply"><ion-button expand="block"(click)="applyChanges()" [disabled]="InformationComplete">Guardar</ion-button> </div>
-  <div class="buttoncancel"><ion-button color="medium" expand="block"(click)="Cancel()">Cancelar</ion-button></div>
-  <div class="tes"><ion-button color="medium" expand="block"(click)="enviarNotificacion()">Cancelar</ion-button></div>
+   
   
 
 </ion-content>
