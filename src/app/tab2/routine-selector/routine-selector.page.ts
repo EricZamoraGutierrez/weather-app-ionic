@@ -4,6 +4,7 @@ import { PopoverController } from '@ionic/angular';
 import {LocalNotifications,ScheduleEvery,ScheduleOptions,} from '@capacitor/local-notifications';
 import { HttpService } from '../../services/http.service';
 import { Geolocation, GeolocationPosition } from '@capacitor/geolocation';
+import { Storage } from '@ionic/storage-angular';
 
 
 @Component({
@@ -61,12 +62,19 @@ export class RoutineSelectorPage implements OnInit {
   weekDays = ['D', 'L', 'M', 'Mi', 'J', 'V', 'S']; //Arreglo de los dias de la semana
   selectedTime: string = ''; //Variable para selecionar la hora
   InformationComplete: boolean = true; //Verificar si la informacion solicitada esta completa
+  notifications: any[] = [];
 
   constructor(
     private modalCtrl: ModalController,
     private popOveCtlr: PopoverController,
-    private http: HttpService
-  ) {}
+    private http: HttpService,
+    private storage: Storage
+  ) {this.initStorage();}
+
+  async initStorage() {
+    // Esperar a que el almacenamiento esté listo
+    await this.storage.create();
+  }
 
   //Metdod para selecionar una actividad
   selectActivity(activity: any) {
@@ -144,7 +152,7 @@ export class RoutineSelectorPage implements OnInit {
       const lng = currentPosition.coords.longitude;
       console.log('Posición actual obtenida:', lat, lng);
 
-      this.http.getWeather(lat, lng).subscribe((weatherData: any) => {
+      this.http.getWeather(lat, lng).subscribe(async (weatherData: any) => {
         if (weatherData && weatherData.current_weather) {
           const temperature = weatherData.current_weather.temperature;
           console.log('Temperatura actual:', temperature);
@@ -172,25 +180,29 @@ export class RoutineSelectorPage implements OnInit {
             default:
               message = `No hay nada que notificar `;
           }
+          const notificationId = Math.floor(Math.random() * 100000);
 
           const notification: ScheduleOptions = {
-      notifications: [
-        {
-          title: activity.name,
-          body: message, 
-          id: 1,
-          schedule: {
-            on: selectedDays,
-            at: new Date(new Date().setHours(Number(hours), Number(minutes))),
-            repeats: true,
-            every: 'week' as ScheduleEvery,
-          },
-          sound: '../../../assets/NotificationsSounds/DarlingOhayoNotification.mp3',
-          smallIcon: activity.Image,
-        },
-      ],
-    };
-    console.log(notification)
+            notifications: [
+              {
+                title: activity.name,
+                body: message,
+                id: notificationId,
+                schedule: {
+                  on: selectedDays,
+                  at: new Date(new Date().setHours(Number(hours), Number(minutes))),
+                  repeats: true,
+                  every: 'week' as ScheduleEvery,
+                },
+                sound: '../../../assets/NotificationsSounds/DarlingOhayoNotification.mp3',
+                smallIcon: activity.Image,
+              },
+            ],
+          };
+
+    //Guardar las notificaciones creadas en el storage 
+    await this.storage.set(`notification_${notificationId}`, JSON.stringify(notification));
+    console.log(notification);
     LocalNotifications.schedule(notification);
     console.log('Notificación programada con éxito!');
         } else {
@@ -200,6 +212,20 @@ export class RoutineSelectorPage implements OnInit {
     } catch (error) {
       console.error('Error al obtener los datos del clima', error);
     }
+  }
+
+
+   // Metodo para cargar las notificaciones almacenadas
+   async loadScheduledNotifications() {
+    this.notifications = [];
+
+    this.storage.forEach((notification: ScheduleOptions, key: string) => {
+      if (key.startsWith('notification_')) {
+        this.notifications.push(notification);
+      }
+    });
+
+    console.log("Lista de notificaciones:", this.notifications);
   }
 
   getWeekDayIndex(day: string) {
@@ -287,7 +313,10 @@ export class RoutineSelectorPage implements OnInit {
     this.popOveCtlr.dismiss();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.loadScheduledNotifications();
+
+  }
 
   dismiss() {
     this.modalCtrl.dismiss();
