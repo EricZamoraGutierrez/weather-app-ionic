@@ -12,7 +12,8 @@ export class ThemesService {
   constructor(
     @Inject(DOCUMENT) private document: Document
   ) { }
-
+  
+  show:boolean = false;
   ThemeSelector(theme: any) {
     let body = document.getElementsByTagName('html')[0];
     let centerImage = document.getElementById('center-image');
@@ -38,6 +39,7 @@ export class ThemesService {
           body.classList.remove();
           body.classList.add('md-Shinobu');
           this.setTheme('shinobu');
+          this.show = true;
           break;
         case 'rem':
           body.classList.remove();
@@ -64,6 +66,7 @@ export class ThemesService {
       body.classList.add('md');
       this.setTheme('md');
     }
+    return this.show;
   }
 
   async setTheme(theme: any) {
@@ -74,5 +77,6 @@ export class ThemesService {
   async getTheme() {
     const { value } = await Preferences.get({ key: 'theme' });
     this.ThemeSelector(value);
+    return value;
   }
 }
