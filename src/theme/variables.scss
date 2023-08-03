@@ -241,7 +241,7 @@ ion-app {
     --ion-background-color: #fbc6c8;
     --ion-background-color-rgb: 18, 18, 18;
 
-    --ion-text-color: #bf3533;
+    --ion-text-color: #000000;
     --ion-text-color-rgb: 255, 255, 255;
 
     --ion-border-color: transparent; //bordecito tabbar
@@ -258,7 +258,9 @@ ion-app {
     --ion-color-step-500: #bf3533;
     --ion-color-step-550: #bf3533; //subtitle y description
     --ion-color-step-600: #bf3533;
+
     --ion-color-step-650: #ffffff; //iconos tabbar
+
     --ion-color-step-700: #bf3533;
     --ion-color-step-750: #bf3533;
     --ion-color-step-800: #bf3533;
@@ -266,7 +268,9 @@ ion-app {
     --ion-color-step-900: #bf3533;
     --ion-color-step-950: #bf3533;
 
+
     --ion-item-background: #none;
+
 
     --ion-toolbar-background: #ff9f9f;
 
@@ -275,7 +279,9 @@ ion-app {
     --ion-card-background: #ffffff;
   }
   .md-Shinobu body {
+
     --ion-color-primary: #260465; //color icon selected
+
     --ion-background-color: #6c579e;
     --ion-background-color-rgb: 18, 18, 18;
 
@@ -312,11 +318,12 @@ ion-app {
     --ion-card-background: #ceb3ff;
   }
   .md-rem body {
-    --ion-color-primary: #2905f5; //color icon selected
+    --ion-color-primary: #079ecf; //color icon selected
     --ion-background-color: #c2dcfd;
     --ion-background-color-rgb: 18, 18, 18;
 
     --ion-text-color: #003578;
+
     --ion-text-color-rgb: 255, 255, 255;
 
     --ion-border-color: transparent; //bordecito tabbar
@@ -342,6 +349,7 @@ ion-app {
     --ion-color-step-950: #ffffff;
 
     --ion-item-background: #none;
+
 
     --ion-toolbar-background: #ffffff;
 
@@ -388,8 +396,10 @@ ion-app {
     --ion-card-background: #071a05;
   }
   .md-rias body {
+
     --ion-color-primary: #870000; //color icon selected
     --ion-background-color: #AA2154;
+
     --ion-background-color-rgb: 18, 18, 18;
 
     --ion-text-color: #ffffff;
@@ -422,6 +432,7 @@ ion-app {
     --ion-toolbar-background: #312A33;
 
     --ion-tab-bar-background: #312A33;
+
 
     --ion-card-background: #ffbaba;
   }

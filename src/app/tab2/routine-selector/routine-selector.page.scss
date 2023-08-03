@@ -6,8 +6,10 @@
 }
 
 //Titulo de la ventana emergente
-.title{
-  margin-left: 2%;
+  .title{
+    margin-left: 2%;
+ 
+  }
   
 
 }
@@ -38,6 +40,44 @@
   margin-top: 10px;
   text-align: center;
   
+
+  //Estilo de cuando se seleciona un actividad
+  .selected {
+    width: 50px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 10px;
+    border: 2px solid var(--ion-tab-bar-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--ion-tab-bar-background);
+  }
+  
+  //Titulo del aparatdo de hora
+.hora {
+  margin-top: 2%;
+  margin-left: 16%;
+}
+
+//Titulo del aprataod de dias
+.dias{
+margin-left: 20%;
+}
+
+.custom-time-input{
+  margin-left: 5%;
+}
+
+.buttonapply{
+  margin-left: 4%;
+  width: auto;
+}
+
+.buttoncancel{
+  margin-right: 2%;
+  width: auto;
 }
 
 
@@ -49,9 +89,11 @@
   padding: 1px; //Espaciado interno 
 }
 
+
 .diaSemanas ion-label {
   font-size: 12px; //Tamaño de fuente
 }
+
 
 .diaSemanas ion-checkbox {
   --size: 16px; // Tamaño del checkbox
