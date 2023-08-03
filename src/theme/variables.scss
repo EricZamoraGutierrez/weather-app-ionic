@@ -258,7 +258,9 @@ ion-app {
     --ion-color-step-500: #bf3533;
     --ion-color-step-550: #bf3533; //subtitle y description
     --ion-color-step-600: #bf3533;
-    --ion-color-step-650: #f0f8ff; //iconos tabbar
+
+    --ion-color-step-650: #ffffff; //iconos tabbar
+
     --ion-color-step-700: #bf3533;
     --ion-color-step-750: #bf3533;
     --ion-color-step-800: #bf3533;
@@ -277,7 +279,9 @@ ion-app {
     --ion-card-background: #ffffff;
   }
   .md-Shinobu body {
-    --ion-color-primary: #da75ca; //color icon selected
+
+    --ion-color-primary: #260465; //color icon selected
+
     --ion-background-color: #6c579e;
     --ion-background-color-rgb: 18, 18, 18;
 
@@ -307,7 +311,6 @@ ion-app {
 
     --ion-item-background: #none;
 
-
     --ion-toolbar-background: #302349;
 
     --ion-tab-bar-background: #302349;
@@ -319,7 +322,8 @@ ion-app {
     --ion-background-color: #c2dcfd;
     --ion-background-color-rgb: 18, 18, 18;
 
-    --ion-text-color: #021938;
+    --ion-text-color: #003578;
+
     --ion-text-color-rgb: 255, 255, 255;
 
     --ion-border-color: transparent; //bordecito tabbar
@@ -343,7 +347,6 @@ ion-app {
     --ion-color-step-850: #2905f5; //card title
     --ion-color-step-900: #e7e7e7;
     --ion-color-step-950: #ffffff;
-
 
     --ion-item-background: #none;
 
@@ -393,8 +396,10 @@ ion-app {
     --ion-card-background: #071a05;
   }
   .md-rias body {
-    --ion-color-primary: #000; //color icon selected
-    --ion-background-color: #ff0000;
+
+    --ion-color-primary: #870000; //color icon selected
+    --ion-background-color: #AA2154;
+
     --ion-background-color-rgb: 18, 18, 18;
 
     --ion-text-color: #ffffff;
@@ -424,9 +429,10 @@ ion-app {
 
     --ion-item-background: #none;
 
-    --ion-toolbar-background: #500000;
+    --ion-toolbar-background: #312A33;
 
-    --ion-tab-bar-background: #500000;
+    --ion-tab-bar-background: #312A33;
+
 
     --ion-card-background: #ffbaba;
   }
