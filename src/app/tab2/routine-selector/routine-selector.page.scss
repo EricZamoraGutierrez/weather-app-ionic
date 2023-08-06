@@ -103,12 +103,12 @@ margin-left: 20%;
   height: 80px;
   border-radius: 50%;
   margin: 10px;
-  border: 2px solid rgb(137, 255, 255);
+  border: 2px solid var(--ion-tab-bar-background);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(137, 255, 255);
+  background-color: var(--ion-tab-bar-background);
 }
 
 //Titulo del aparatdo de hora
