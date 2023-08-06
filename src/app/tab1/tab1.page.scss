@@ -69,3 +69,33 @@ ion-item {
   left: 0;
   z-index: -1;
 }
+.center-image-rem {
+  --background: url("../../assets/ZeroTwo/ZeroTwoWeather.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.center-image-tatsumaki {
+  --background: url("../../assets/ZeroTwo/ZeroTwoWeather.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.center-image-rias {
+  --background: url("../../assets/ZeroTwo/ZeroTwoWeather.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
