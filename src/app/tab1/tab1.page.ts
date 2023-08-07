@@ -48,7 +48,7 @@ export class Tab1Page {
         break;
       }
       default: {
-        this.show = "center-image-zerotwo";
+        this.show = "center-image-default";
         break;
       }
   }
